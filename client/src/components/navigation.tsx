@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
+import { ThemeToggle } from './theme-toggle';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,17 +17,26 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-card">
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2" data-testid="logo-link">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <i className="fas fa-route text-primary-foreground text-sm"></i>
+          <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7" />
+                  <circle cx="12" cy="9" r="3" />
+                </svg>
+              </div>
+              
             </div>
-            <span className="text-xl font-bold gradient-text">DigiSaarthi</span>
+            <div className="flex items-center space-x-1">
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">Digi</span>
+              <span className="text-2xl font-bold text-cyan-500">Saarthi</span>
+            </div>
           </Link>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -40,6 +50,7 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
             <Link
               href="/signup"
               className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
@@ -49,10 +60,13 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-3">
+            <div className="flex items-center justify-center">
+              <ThemeToggle />
+            </div>
             <button
               onClick={toggleMobileMenu}
-              className="text-foreground hover:text-primary"
+              className="text-foreground hover:text-primary p-2"
               data-testid="mobile-menu-toggle"
             >
               <i className="fas fa-bars text-xl"></i>

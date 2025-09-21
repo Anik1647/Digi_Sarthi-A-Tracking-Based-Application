@@ -10,6 +10,7 @@ import DriverApp from "@/pages/driver-app";
 import Signup from "@/pages/signup";
 import Navigation from "@/components/navigation";
 import SpaceBackground from "@/components/space-background";
+import { ThemeProvider } from "@/components/theme-provider";
 
 function Router() {
   return (
@@ -27,14 +28,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen relative">
-          <SpaceBackground />
-          <Navigation />
-          <main>
-            <Router />
-          </main>
-          <Toaster />
-        </div>
+        <ThemeProvider>
+          <div className="min-h-screen relative bg-background text-foreground">
+            <Navigation />
+            <main>
+              <Router />
+            </main>
+            <Toaster />
+          </div>
+        </ThemeProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

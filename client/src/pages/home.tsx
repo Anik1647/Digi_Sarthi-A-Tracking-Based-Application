@@ -8,7 +8,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Smart <span className="gradient-text">Public Transport</span> Tracking
+            Welcome to <span className="gradient-text">DigiSaarthi</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Never miss your bus again. Track real-time locations, optimize your commute, and transform public transportation in your city.
@@ -76,28 +76,107 @@ export default function Home() {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           <div className="glass-card p-8 rounded-xl" data-testid="features-passengers">
-            <h3 className="text-2xl font-semibold mb-4 flex items-center">
-              <i className="fas fa-users text-primary mr-3"></i>
-              For Passengers
-            </h3>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Real-time bus locations</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Arrival time predictions</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Route planning assistance</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Crowd density information</li>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                <svg className="w-7 h-7 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold">For Passengers</h3>
+            </div>
+            <ul className="space-y-4">
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/>
+                    <circle cx="12" cy="9" r="2"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Real-time bus locations</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Arrival time predictions</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 3l18 18M10.5 6.5L20 3l-3 9.5M7 10l-3 9.5 9.5-3"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Route planning assistance</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <circle cx="19" cy="11" r="2"/>
+                    <path d="M19 13v3"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Crowd density information</span>
+              </li>
             </ul>
           </div>
 
           <div className="glass-card p-8 rounded-xl" data-testid="features-drivers">
-            <h3 className="text-2xl font-semibold mb-4 flex items-center">
-              <i className="fas fa-bus text-primary mr-3"></i>
-              For Drivers
-            </h3>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Easy location sharing</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Route optimization</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Passenger analytics</li>
-              <li className="flex items-center"><i className="fas fa-check text-accent mr-2"></i>Emergency assistance</li>
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center">
+                <svg className="w-7 h-7 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <path d="M22 10h-4.5a1.5 1.5 0 0 0-3 0H2"/>
+                  <circle cx="7" cy="15" r="1"/>
+                  <circle cx="17" cy="15" r="1"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold">For Drivers</h3>
+            </div>
+            <ul className="space-y-4">
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Easy location sharing</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="9 17 4 12 9 7"/>
+                    <path d="M20 18v-2a4 4 0 0 0-4-4H4"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Route optimization</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 21H3M21 21V7M3 21V3M3 3h18M3 3l9 9 3-3 6 6"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Passenger analytics</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L4 7l8 5 8-5-8-5z"/>
+                    <path d="M4 12l8 5 8-5"/>
+                    <path d="M12 22v-5"/>
+                  </svg>
+                </div>
+                <span className="text-lg text-muted-foreground">Emergency assistance</span>
+              </li>
             </ul>
           </div>
         </div>

@@ -36,24 +36,28 @@ export default function DriverApp() {
               {/* Download Buttons */}
               <div className="space-y-4">
                 <button 
-                  className="w-full bg-black text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-3 hover:bg-gray-800 transition-colors"
+                  className="w-full bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-xl flex items-center justify-center space-x-4 transition-all duration-200 shadow-lg"
                   data-testid="button-app-store"
                 >
-                  <i className="fab fa-apple text-2xl"></i>
+                  <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
                   <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-lg font-semibold">App Store</div>
+                    <div className="text-xs opacity-75">Download on the</div>
+                    <div className="text-lg font-semibold -mt-1">App Store</div>
                   </div>
                 </button>
                 
                 <button 
-                  className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg flex items-center justify-center space-x-3 hover:bg-primary/90 transition-colors"
+                  className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-4 px-6 rounded-xl flex items-center justify-center space-x-4 transition-all duration-200 shadow-lg"
                   data-testid="button-google-play"
                 >
-                  <i className="fab fa-google-play text-2xl"></i>
+                  <svg viewBox="0 0 24 24" className="w-8 h-8" fill="currentColor">
+                    <path d="M3 20.5v-17c0-.84.55-1.6 1.34-1.86l11.95 10.36L3 20.5zm2.84-17.84c.19-.09.4-.16.62-.16.19 0 .38.05.55.13l12.08 6.97-3.25 2.82L4.84 2.66zM19 12l3.01-1.74c.57-.33.99-.97.99-1.76 0-.79-.42-1.43-.99-1.76L19 5l-3.45 3L19 12zm-3.45 3L4.84 21.34c-.17.08-.36.13-.55.13-.22 0-.43-.07-.62-.16L16.29 12l3.26 2.83L15.55 15z"/>
+                  </svg>
                   <div className="text-left">
-                    <div className="text-xs">Get it on</div>
-                    <div className="text-lg font-semibold">Google Play</div>
+                    <div className="text-xs opacity-75">Get it on</div>
+                    <div className="text-lg font-semibold -mt-1">Google Play</div>
                   </div>
                 </button>
               </div>
@@ -63,10 +67,14 @@ export default function DriverApp() {
           {/* App Features */}
           <div className="order-1 lg:order-2">
             <div className="space-y-6">
-              <div className="glass-card p-6 rounded-xl" data-testid="feature-location-sharing">
+              <div className="glass-card p-6 rounded-xl transform transition-all hover:scale-[1.02]" data-testid="feature-location-sharing">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-map-marked-alt text-primary text-xl"></i>
+                  <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/>
+                      <circle cx="12" cy="9" r="3"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Real-time Location Sharing</h3>
@@ -75,10 +83,12 @@ export default function DriverApp() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 rounded-xl" data-testid="feature-route-optimization">
+              <div className="glass-card p-6 rounded-xl transform transition-all hover:scale-[1.02]" data-testid="feature-route-optimization">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-route text-accent text-xl"></i>
+                  <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Route Optimization</h3>
@@ -87,10 +97,12 @@ export default function DriverApp() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 rounded-xl" data-testid="feature-analytics">
+              <div className="glass-card p-6 rounded-xl transform transition-all hover:scale-[1.02]" data-testid="feature-analytics">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-chart-line text-primary text-xl"></i>
+                  <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 21H3M21 21V7M3 21V3M3 3h18M3 3l9 9 3-3 6 6"/>
+                    </svg>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Performance Analytics</h3>
@@ -99,13 +111,23 @@ export default function DriverApp() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 rounded-xl" data-testid="feature-emergency">
+              <div className="glass-card p-6 rounded-xl transform transition-all hover:scale-[1.02]" data-testid="feature-emergency">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-shield-alt text-accent text-xl"></i>
+                  <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2L4 7l8 5 8-5-8-5z"/>
+                      <path d="M4 12l8 5 8-5"/>
+                      <path d="M12 22v-5"/>
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M12 9v6"/>
+                      <path d="M9 12h6"/>
+                    </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Emergency Support</h3>
+                    <h3 className="text-lg font-semibold mb-2 flex items-center">
+                      Emergency Support
+                      <span className="ml-2 text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">24/7</span>
+                    </h3>
                     <p className="text-muted-foreground">One-tap emergency assistance and direct communication with dispatch</p>
                   </div>
                 </div>

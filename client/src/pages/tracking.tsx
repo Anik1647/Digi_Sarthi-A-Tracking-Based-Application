@@ -37,8 +37,7 @@ export default function Tracking() {
 
         {/* Map Container */}
         <div className="glass-card p-4 rounded-xl mb-8" data-testid="map-container">
-          <NetworkTest />
-          <MinimalMapsTest />
+          
           <VehicleMap />
         </div>
 
